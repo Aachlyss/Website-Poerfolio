@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ivan Angelov - Porfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1"/>
+        <link rel="icon" type="image/x-icon" href="cut2.png">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#about">Welcome</a></li>
+                <li><a href="#services">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="about" class="about">
+
+            <div class="empty">
+            </div>
+
+            <article>
+                <div class="title">
+                    <h1>Ivan Angelov</h1>
+                </div>
+                
+            </article>
+            
+        </section>
+        
+        <section id="services" class="service service-html sticky">
+            <article>
+                <figure>
+                </figure>
+                
+                <div class="text">
+                    <h2>
+                    
+                    </h2>
+                    <p>
+                    
+                    </p>
+                    <a></a>
+                </div>
+            </article>
+        </section>
+        <section class="service service-css sticky">
+            <article>
+                <figure>
+                </figure>
+                
+                <div class="text">
+                    <h2>
+                    
+                    </h2>
+                    <p>
+                       
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="service service-java sticky">
+            <article>
+                <figure>
+                </figure>
+                
+                <div class="text">
+                    <h2>
+                    </h2>
+
+                    <p>
+
+                    </p>
+                    <a ></a>
+                </div>
+            </article>
+        </section>
+        <section id="contact" class="contact sticky">
+            <a href="mailto:ivanangelov05@gmail.com">ivanangelov05@gmail.com</a>
+        </section>      
+        <script>
+            let emptyElement = document.querySelector('.about .empty');
+            let titleElement = document.querySelector('.about .title');
+
+            let figureElements = document.querySelectorAll('.service figure');
+
+            window.addEventListener( 'mousemove', handleMouseMove);
+
+            function handleMouseMove( event ) {
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY / 2 + 'px';
+
+                figureElements.forEach( function( element ) {
+                //console.log(element)
+                element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';;
+
+            });
+            }
+        </script>        
+    </body>
+</html>

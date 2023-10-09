@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ivan Angelov - Porfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1"/>
+        <link rel="icon" type="image/x-icon" href="cut2.png">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#about">Welcome</a></li>
+                <li><a href="#services">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="about" class="about">
+
+            <div class="empty">
+            </div>
+
+            <article>
+                <div class="title">
+                    <h1>Ivan Angelov</h1>
+                </div>
+                <div class="description">
+                    <p>
+                        Greetings! I'm an almost 19-year-old individual who 
+                        has spent the past five years immersed in
+                        learnig coding and design. I possess
+                        a triple skill set, proficient in 
+                        coding, design and near-to-native English.
+                        I am very determined and will take any job very seriously.              
+                        <br>
+                    </p>
+                </div>
+            </article>
+            
+        </section>
+        
+        <section id="services" class="service service-html sticky">
+            <article>
+                <figure>
+                    <img src="img/boxthree.png" width="200"/>
+                </figure>
+                
+                <div class="text">
+                    <h2>
+                    QUALIFICATIONS
+                    </h2>
+                    <p>
+                    I have been studying coding for the past 5 years in <a href="https://pmg-pernik.com/">PMG "Hristo Smirnenski"</a>, Pernik.
+                    There, I have obtained great knowledge of C#, HTML, CSS, SQL and OOP (Object Oriented Programming)
+                    <br>
+                    I have been studying English at <a href="https://www.forceschool.com/">Force English School</a> ever since I was 5 and I possess a C2 level certificate.
+                    </p>
+                    <a href="Ivan_Angelov_-_Edited.pdf">Learn More In My CV</a>
+                </div>
+            </article>
+        </section>
+        <section class="service service-css sticky">
+            <article>
+                <figure>
+                    <img src="img/boxtwo.png" width="200"/>
+                </figure>
+                
+                <div class="text">
+                    <h2>
+                    PROJECTS
+                    </h2>
+                    <p>
+                        You Can Check All Of My Projects On GitHub And CodeWars:
+                        <ul>
+                            <li>
+                                <a href="https://github.com/Aachlyss">
+                                    GitHub
+                                </a>
+                                - Primarily C#, OOP, HTML and CSS
+                            </li>
+                            <li>
+                                <a href="https://www.codewars.com/users/Aachlyss">
+                                    Code Wars
+                                </a>
+                                - Algorithms with C# and Python
+                            </li>
+                        </ul>
+                        Software I Work With:
+                        <ul>
+                            <li>
+                                <a href="https://code.visualstudio.com/">
+                                    Visual Studio Code
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://visualstudio.microsoft.com/vs/">
+                                    Visual Studio 2022
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.adobe.com/">
+                                    Adobe Photoshop, Illustrator, InDesign
+                                </a>
+                                and more.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="service service-java sticky">
+            <article>
+                <figure>
+                    <img src="img/boxone.png" width="200"/>
+                </figure>
+                
+                <div class="text">
+                    <h2>
+                        MORE ABOUT ME
+                    </h2>
+
+                    <p>
+                        As an only child born in 2005 I have always had interest in computers and drawing.
+                        I have many hobbies some being: Boxing, Video Games and walks in nature.
+                        I have many friends and good communication with people.
+                        My presence on <a href="https://www.facebook.com/profile.php?id=100008625853033">Facebook</a> and <a href="https://www.instagram.com/i_._angelov">Instagram</a>.
+                        <br>
+
+                    </p>
+                    <a href="https://www.youtube.com/@Ramen-pw3xg">YouTube Channel</a>
+                </div>
+            </article>
+        </section>
+        <section id="contact" class="contact sticky">
+            <a href="mailto:ivanangelov05@gmail.com">ivanangelov05@gmail.com</a>
+        </section>      
+        <script>
+            let emptyElement = document.querySelector('.about .empty');
+            let titleElement = document.querySelector('.about .title');
+
+            let figureElements = document.querySelectorAll('.service figure');
+
+            window.addEventListener( 'mousemove', handleMouseMove);
+
+            function handleMouseMove( event ) {
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY / 2 + 'px';
+
+                figureElements.forEach( function( element ) {
+                //console.log(element)
+                element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';;
+
+            });
+            }
+        </script>        
+    </body>
+</html>
