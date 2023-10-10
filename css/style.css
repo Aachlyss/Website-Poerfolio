@@ -118,7 +118,7 @@ section.service figure {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 56.25vw;
+    flex-basis: 1vh;
     margin: 0;
     background: #d0ff94;
     border-radius: 100px;
@@ -135,6 +135,7 @@ section.service .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
     flex: 1.5;
     background: #1f1a1c;
     padding: 3.125vw;
@@ -230,29 +231,49 @@ section.contact a:hover {
 @media only screen and (max-width: 768px) {
     html,body{
         border-radius: 50px;
-        padding: 6.25vw;
     }
     h1{
         font-size: 60px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 90px;
+
     }
     h2{
-        font-size: 40px;
-        margin-left: 20px;
+        font-size: 8.3vw;
+        padding-top: 40px;
     }
+
     nav ul li{
         margin-left: 25px;
+    }
+    p{
+        font-size: .9rem;
+        padding: 10px;
     }
 
     section.service article {
         flex-direction: column;
+        text-align: center;
+        
     }
     section.service figure{
-        flex-basis: 25vh;
+        margin-top: 30px;
+        margin-left: 17vw;
+        margin-bottom: 20px;
+        flex-basis: 3vh;
+        
     }
     section.service figure img{
         width: 20%;
     }
-
+    section.contact {
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
     section.contact a{
         font-size: 40px;
         transform: rotate(90deg);
@@ -269,6 +290,19 @@ section.contact a:hover {
     section.service.service-css .text a {
     margin-left: 20px;
     }
+    @keyframes float {
+        0% {
+            transform: translateY(); /* Removed the space inside parentheses */
+        }
+        100% {
+            transform: translateY(); /* Removed the space inside parentheses */
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    section.about .empty{
+    display: none;    
+}
 }
 
 svg {
